@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --bg-color: #1e213f;
+  --dark-bg: #191c39;
+  --button-bg: #f87070;
+  --cl-dark-blue: #1e213f;
+  --button-radius: 30px;
+
+  height: 90vh;
+  background: var(--bg-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.app {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  background: var(--dark-bg);
+  gap: 5px;
+  border-radius: var(--button-radius);
+}
+
+.settings li {
+  padding: 15px 20px 15px 20px;
+  border-radius: var(--button-radius);
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings li.active {
+  background: var(--button-bg);
+  color: var(--cl-dark-blue);
+}
+
+#circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  align-self: center;
+  border-radius: 100%;
+  margin-top: 30px;
+  background: rgb(20, 23, 51);
+  background: linear-gradient(
+    132deg,
+    rgba(20, 23, 51, 1) 0%,
+    rgba(41, 45, 82, 1) 100%
+  );
+}
+
+.clock button {
+  z-index: 9;
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+
+.clock button:hover {
+  color: var(--button-bg);
+  letter-spacing: 15px;
+}
+
+.outline-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.time {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
